@@ -12,7 +12,7 @@ function Layout(props) {
   useEffect(() => {
     initializerLS();
     console.log(JSON.parse(localStorage.getItem("cartState")));
-  }, [initializerLS]);
+  }, []);
 
   const ls = useRef(); //localStorage
   const htmlClass = useRef(); // document html class attribute
