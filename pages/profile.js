@@ -33,3 +33,5 @@ function Profile() {
 }
 
 export default Profile;
+
+// export async function getServerSideProps() {} //getserversideprops for getting db data, other data etc and api routes for setting data.

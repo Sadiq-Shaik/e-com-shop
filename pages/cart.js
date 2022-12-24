@@ -21,8 +21,8 @@ function Cart(props) {
   if (status == "unauthenticated") {
     return (
       <div className="w-3/4 flex flex-col gap-4 mx-auto text-center my-4">
-        <h2 className="">Use must Login first</h2>
-        <Link className="hover:underline" href="/login">
+        <h2 className="text-xl">You must Login first</h2>
+        <Link className="hover:underline text-xl" href="/login">
           Click here to navigate to login page
         </Link>
       </div>
@@ -51,7 +51,6 @@ function Cart(props) {
                     style: "currency",
                     currency: "INR",
                   }).format(item.price)}
-                  /-
                 </span>
               </p>
               <p className="bg-slate-500 px-4 py-2 rounded-lg flex items-center gap-2">
@@ -91,7 +90,6 @@ function Cart(props) {
                   style: "currency",
                   currency: "INR",
                 }).format(totalAmount)}
-                /-
               </p>
               <button className="text-xl w-full md:w-1/4 bg-slate-400 dark:bg-slate-800 p-4 rounded-lg hover:-translate-y-0.5 active:outline active:translate-y-0.5">
                 Pay now

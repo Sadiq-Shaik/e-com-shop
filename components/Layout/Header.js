@@ -96,10 +96,10 @@ function Header(props) {
           )} */}
         </nav>
         <button
-          className="fixed text-sm md:text-base z-15 bottom-6 left-6 p-2 border-2 border-slate-700 dark:border-slate-300 bg-slate-300 dark:bg-slate-700 rounded-md"
+          className="fixed text-xs md:text-base z-15 bottom-20 left-6 p-2 border-2 border-slate-700 dark:border-slate-300 bg-slate-300 dark:bg-slate-700 rounded-md"
           onClick={toggleDark}
         >
-          Toggle Dark Mode
+          {isDark ? "Light" : "Dark"}
         </button>
       </section>
       <NavPortal openModal={openModal}>

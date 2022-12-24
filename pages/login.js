@@ -82,16 +82,18 @@ function Login() {
   }
 
   return (
-    <div className="min-h-[75vh] w-[80%] md:w-1/2 mx-auto p-8 my-8 bg-slate-400 dark:bg-slate-600 rounded-lg">
+    <div className="w-[85%] md:max-w-lg mx-auto p-8 my-8 bg-slate-400 dark:bg-slate-600 rounded-lg">
       <form
         onSubmit={formSubmitHandler}
-        className="flex flex-col border-2 border-slate-900 dark:border-slate-200 md:p-4 rounded-lg w-full lg:w-1/2 mx-auto"
+        className="flex flex-col border-2 border-slate-900 dark:border-slate-200 md:p-4 rounded-lg w-full mx-auto"
       >
         <h2 className="text-xl text-center font-bold p-4">
           {isExistingUser ? "Login" : "Sign Up"}
         </h2>
-        <div className="p-4 flex items-center gap-4">
-          <label htmlFor="email">Email:</label>
+        <div className="p-4 flex flex-col gap-2">
+          <label htmlFor="email" className="block">
+            Email
+          </label>
           <input
             ref={emailRef}
             className="w-full px-2 py-1 rounded-lg dark:text-black"
@@ -102,8 +104,10 @@ function Login() {
             required
           />
         </div>
-        <div className="p-4 flex items-center gap-4">
-          <label htmlFor="password">Password:</label>
+        <div className="p-4 flex flex-col gap-2">
+          <label htmlFor="password" className="block">
+            Password
+          </label>
           <input
             ref={passwordRef}
             className="w-full px-2 py-1 rounded-lg dark:text-black"
@@ -123,7 +127,7 @@ function Login() {
         </div>
       </form>
       <button
-        className="block text-center mx-auto  w-1/2 my-2 hover:underline p-2"
+        className="block text-center mx-auto md:w-1/2 my-2 hover:underline p-2"
         onClick={switchForm}
       >
         {isExistingUser
